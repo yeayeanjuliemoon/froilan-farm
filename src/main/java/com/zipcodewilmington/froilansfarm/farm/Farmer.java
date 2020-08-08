@@ -6,6 +6,10 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 public class Farmer extends Person implements Botanist, Rider {
 
+    public Farmer(String name, Integer id) {
+        super(name, id);
+    }
+
     public Crop plant(Crop c, CropRow row) {
         return null;
     }
