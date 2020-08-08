@@ -14,8 +14,8 @@ public class Farmers {
         this.farmerList.add(new Pilot("Froilanda", 2));
     }
 
-    public Farmers getInstance(){
-        return this.instance;
+    public static Farmers getInstance(){
+        return instance;
     }
 
     public List<Farmer> getFarmerList(){
