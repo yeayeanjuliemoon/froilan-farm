@@ -45,4 +45,15 @@ public class TestFarmers {
 
         assertTrue(froilanda instanceof Pilot);
     }
+
+    @Test
+    public void testIfFarmersAreTheSame(){
+        // Test to ensure that getting the farmer from two different calls of getInstance returns the same farmer object
+        Farmers newFarmers = Farmers.getInstance();
+        List<Farmer> newFarmerList = newFarmers.getFarmerList();
+        Farmer froilanda1 = this.farmersList.get(1);
+        Farmer froilanda2 = newFarmerList.get(1);
+
+        assertEquals(froilanda1, froilanda2);
+    }
 }
