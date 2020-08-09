@@ -22,8 +22,13 @@ public class Horse extends Animal implements Rideable {
         Boolean hasBeenRidden = true;
     }
 
+    public boolean feedHorse(Inventory foodSource){
+        EarCorn corn = new EarCorn();
+        return eat(corn, foodSource) && eat(corn, foodSource) && eat(corn, foodSource);
+    }
+
     @Override
     public boolean eat(Edible toEat, Inventory foodSource) {
-        return false;
+        return foodSource.removeFromContainer(toEat);
     }
 }
