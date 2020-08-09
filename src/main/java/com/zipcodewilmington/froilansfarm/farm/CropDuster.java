@@ -9,7 +9,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
 
     public String makeNoise() {
-        return null;
+        return "Hiss";
     }
 
     public void ride() {
@@ -17,6 +17,6 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
 
     public void fertilize(CropRow row) {
-
+        row.fertilizeRow();
     }
 }

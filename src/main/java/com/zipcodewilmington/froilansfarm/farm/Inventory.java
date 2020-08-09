@@ -4,17 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Inventory {
-    Map<Edible, Integer> inventory = new HashMap<Edible, Integer>();
+    Map<Edible, Integer> container = new HashMap<>();
 
-    public void addToInventory(Edible edible) {
-
+    public void addToContainer(Edible edible) {
+        if(!container.containsKey(edible)) {
+            container.put(edible, 1);
+        } else {
+            container.put(edible, container.get(edible) + 1);
+        }
     }
 
-    public void getInventory(Edible edible) {
-
+    public Map<Edible, Integer> getContainer() {
+        return this.container;
     }
 
-    public void removeFromInventory(Edible edible) {
-
+    public void removeFromContainer(Edible edible) {
+        if(container.containsKey(edible)) {
+            container.put(edible, container.get(edible) - 1);
+        }
     }
 }
