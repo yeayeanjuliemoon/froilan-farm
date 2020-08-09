@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ChickenTest {
 
    Chicken chicken;
+   private Inventory inv = new Inventory();
 
     @BeforeEach
     void setUp(){
@@ -31,5 +32,18 @@ class ChickenTest {
     void yield() {
 
         Assert.assertNotNull(chicken.yield());
+    }
+
+    @Test
+    void testEatSuccess(){
+        inv.addToContainer(new EarCorn());
+
+        assertTrue(chicken.eat(new EarCorn(), this.inv));
+    }
+
+    @Test
+    void testEatFailure(){
+
+        assertFalse(chicken.eat(new EarCorn(), this.inv));
     }
 }
