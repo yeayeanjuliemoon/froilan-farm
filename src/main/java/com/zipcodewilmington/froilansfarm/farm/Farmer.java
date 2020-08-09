@@ -14,9 +14,7 @@ public class Farmer extends Person implements Botanist, Rider {
         return null;
     }
 
-    public void Eat(Edible toEat) {
 
-    }
 
     public String makeNoise() {
         return null;
@@ -27,6 +25,10 @@ public class Farmer extends Person implements Botanist, Rider {
     }
 
     public void dismount(Rideable rideable) {
+
+    }
+
+    public void eat(Edible toEat) {
 
     }
 }
