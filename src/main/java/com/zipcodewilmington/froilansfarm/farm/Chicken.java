@@ -27,8 +27,10 @@ public class Chicken extends Animal implements Produce {
         return null;
     }
 
-    @Override
-    public void eat(Edible toEat, Inventory foodSource) {
 
+
+    @Override
+    public boolean eat(Edible toEat, Inventory foodSource) {
+        return foodSource.removeFromContainer(toEat);
     }
 }

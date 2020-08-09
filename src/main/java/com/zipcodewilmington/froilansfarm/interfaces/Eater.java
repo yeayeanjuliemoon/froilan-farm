@@ -5,5 +5,5 @@ import com.zipcodewilmington.froilansfarm.farm.Inventory;
 
 public interface Eater {
 
-    void eat(Edible toEat, Inventory foodSource);
+    boolean eat(Edible toEat, Inventory foodSource);
 }

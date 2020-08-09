@@ -23,7 +23,7 @@ public class Horse extends Animal implements Rideable {
     }
 
     @Override
-    public void eat(Edible toEat, Inventory foodSource) {
-
+    public boolean eat(Edible toEat, Inventory foodSource) {
+        return false;
     }
 }

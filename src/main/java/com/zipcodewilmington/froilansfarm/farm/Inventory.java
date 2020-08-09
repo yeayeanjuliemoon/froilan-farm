@@ -14,17 +14,39 @@ public class Inventory {
         }
     }
 
+    public void addMultiple(Edible edible, Integer num){
+        if(!container.containsKey(edible)) {
+            container.put(edible, num);
+        } else {
+            container.put(edible, container.get(edible) + num);
+        }
+    }
+
     public Map<Edible, Integer> getContainer() {
         return this.container;
     }
 
-    public void removeFromContainer(Edible edible) {
-        if(container.containsKey(edible)) {
+    public boolean removeFromContainer(Edible edible) {
+        if(container.containsKey(edible) && container.get(edible) > 0) {
             container.put(edible, container.get(edible) - 1);
+            return true;
+        }
+        else{
+            return false;
         }
     }
 
     public Integer getCount(Edible edible){
         return this.container.get(edible);
+    }
+
+    public boolean removeMultiple(Edible edible, Integer num){
+        if(container.containsKey(edible)){
+            if(getCount(edible) >= num){
+                container.replace(edible, container.get(edible) - num);
+                return true;
+            }
+        }
+        return false;
     }
 }
