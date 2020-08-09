@@ -2,23 +2,30 @@ package com.zipcodewilmington.froilansfarm.farm;
 
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
+import java.util.HashMap;
+
 public class Tractor extends Vehicle implements FarmVehicle {
     private Inventory inventory;
-    private Edible edible;
+
+    public Tractor() {
+        this.inventory = new Inventory();
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
 
     public void operate(Farm farm) {
-
     }
 
     public String makeNoise() {
-        return null;
+        return "Vroom";
     }
 
     public void ride() {
-
     }
 
     public void harvest(Crop crop) {
-        this.inventory.addToInventory(edible);
+        this.inventory.addToContainer(crop.yield());
     }
 }
