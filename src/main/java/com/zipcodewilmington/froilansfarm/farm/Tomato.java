@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-public abstract  class Edible {
+public class Tomato extends Edible {
 
-    Edible(){
+    Tomato(){
 
     }
 

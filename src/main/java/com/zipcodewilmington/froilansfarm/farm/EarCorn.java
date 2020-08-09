@@ -1,9 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-public abstract  class Edible {
+public class EarCorn extends Edible {
 
-    Edible(){
+    EarCorn(){
 
     }
-
 }

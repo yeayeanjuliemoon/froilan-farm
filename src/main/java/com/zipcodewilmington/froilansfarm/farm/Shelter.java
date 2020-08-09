@@ -2,5 +2,9 @@ package com.zipcodewilmington.froilansfarm.farm;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Eater;
 
-public abstract class Shelter<K, V extends Eater> {
+import java.util.HashMap;
+import java.util.Map;
+
+public class Shelter<K, V extends Eater> {
+
 }
