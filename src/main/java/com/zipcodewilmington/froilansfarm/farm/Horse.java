@@ -13,9 +13,6 @@ public class Horse extends Animal implements Rideable {
     Horse(Integer id,String name){
         super(id,name);
     }
-    public void eat(Edible toEat) {
-        this.toEat = toEat;
-    }
 
     public String makeNoise() {
         return "HaHaHa";
@@ -23,5 +20,10 @@ public class Horse extends Animal implements Rideable {
 
     public void ride() {
         Boolean hasBeenRidden = true;
+    }
+
+    @Override
+    public void eat(Edible toEat, Inventory foodSource) {
+
     }
 }

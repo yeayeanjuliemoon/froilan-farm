@@ -23,4 +23,8 @@ public class Inventory {
             container.put(edible, container.get(edible) - 1);
         }
     }
+
+    public Integer getCount(Edible edible){
+        return this.container.get(edible);
+    }
 }

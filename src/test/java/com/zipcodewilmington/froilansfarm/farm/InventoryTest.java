@@ -44,4 +44,18 @@ public class InventoryTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetCount() {
+        Inventory inventory = new Inventory();
+
+        inventory.addToContainer(new Tomato());
+        inventory.addToContainer(new Tomato());
+        inventory.addToContainer(new Tomato());
+
+        Integer expected = 3;
+        Integer actual = inventory.getCount(new Tomato());
+
+        Assert.assertEquals(expected, actual);
+    }
 }

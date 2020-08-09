@@ -21,14 +21,14 @@ public class Farmer extends Person implements Botanist, Rider {
     }
 
     public void mount(Rideable rideable) {
-
+        rideable.ride();
     }
 
     public void dismount(Rideable rideable) {
 
     }
 
-    public void eat(Edible toEat) {
+    public void eat(Edible toEat, Inventory foodSource) {
 
     }
 }

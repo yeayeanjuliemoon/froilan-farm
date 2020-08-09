@@ -13,9 +13,6 @@ public class Chicken extends Animal implements Produce {
         super(id,name);
     }
 
-    public void eat(Edible toEat) {
-        this.toEat = toEat;
-    }
 
     public String makeNoise() {
         return "ChickChick";
@@ -28,5 +25,10 @@ public class Chicken extends Animal implements Produce {
         }
 
         return null;
+    }
+
+    @Override
+    public void eat(Edible toEat, Inventory foodSource) {
+
     }
 }
