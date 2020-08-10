@@ -7,6 +7,7 @@ public class Field {
 
     List<CropRow> cropRowList;
     boolean hasBeenFertilized = false;
+
     CropRow cropRow;
 
     Field(){
@@ -23,15 +24,19 @@ public class Field {
         return cropRowList;
     }
 
+    public CropRow getCropRow() {
+        return cropRow;
+    }
+
     public void setCropRowList(List<CropRow> cropRowList) {
         this.cropRowList = cropRowList;
     }
 
-    void fertilizeField(){
+    public void fertilizeField(){
         hasBeenFertilized = true;
     }
 
-    void resetFertilizer(){
+    public void resetFertilizer(){
         hasBeenFertilized = false;
     }
 }

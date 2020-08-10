@@ -92,6 +92,11 @@ public class Farm {
     }
 
     public Field getField() {
+        field.setField(new CornStalk());
+        field.setField(new TomatoPlant());
+        field.setField(new CornStalk());
+        field.setField(new CornStalk());
+        field.setField(new TomatoPlant());
         return field;
     }
 

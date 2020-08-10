@@ -14,4 +14,10 @@ public class Stable extends Shelter<Integer, Horse> {
         }
     }
 
+    public List<Horse> getHorses() {
+        List<Horse> horses = new ArrayList<>();
+        horses.addAll(super.getInhabitants());
+        return horses;
+    }
+
 }
