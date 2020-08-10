@@ -47,4 +47,17 @@ public class TestFarmHouse {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testForType(){
+        Farmer p = new Farmer("Frank", 1);
+
+        this.farmHouse.addPerson(p);
+
+        List<Person> personList = this.farmHouse.getInhabitants();
+
+        Person result = personList.get(0);
+
+        assertTrue(result instanceof Farmer);
+    }
+
 }
