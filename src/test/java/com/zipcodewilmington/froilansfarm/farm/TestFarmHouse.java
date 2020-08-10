@@ -27,7 +27,7 @@ public class TestFarmHouse {
 
         this.farmHouse.addPerson(p);
 
-        List<Person> personList = this.farmHouse.getPersonList();
+        List<Person> personList = this.farmHouse.getInhabitants();
 
         assertTrue(personList.contains(p));
     }
@@ -42,7 +42,7 @@ public class TestFarmHouse {
 
         this.farmHouse.addPeople(expected);
 
-        List<Person> actual = this.farmHouse.getPersonList();
+        List<Person> actual = this.farmHouse.getInhabitants();
 
         assertEquals(expected, actual);
     }

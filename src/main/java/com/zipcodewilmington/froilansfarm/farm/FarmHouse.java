@@ -11,12 +11,6 @@ public class FarmHouse extends Shelter<String, Person>{
         super();
     }
 
-    public List<Person> getPersonList(){
-        ArrayList<Person> retList = new ArrayList<>();
-        retList.addAll(this.inhabitants.values());
-        return retList;
-    }
-
     public void addPerson(Person p){
         super.add(p.getName(), p);
     }

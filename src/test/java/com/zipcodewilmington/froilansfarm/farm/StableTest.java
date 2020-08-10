@@ -7,21 +7,30 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class StableTest {
 
-    Stable stable;
-    List<Horse> actualStable;
+    private Stable stable;
 
-
-    public StableTest(){
-        stable = new Stable();
+    StableTest(){
+        this.stable = new Stable();
     }
 
     @Test
-    public void getStableTest(){
-        actualStable = stable.getStable(4);
-        Assert.assertTrue(actualStable.size()==4);
-        Assert.assertNotNull(actualStable);
+    void testMakeChickens() {
+        Integer expected = 15;
+        this.stable.addHorses(expected);
+
+        Integer actual = this.stable.getInhabitants().size();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void instanceOf(){
+
+        Assert.assertTrue(stable != null);
     }
 
 }
