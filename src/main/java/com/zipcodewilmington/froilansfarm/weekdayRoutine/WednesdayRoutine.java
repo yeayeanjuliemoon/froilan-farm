@@ -12,7 +12,7 @@ public class WednesdayRoutine implements WeekdayRoutine{
 
     }
 
-    public void PilotRoutine(Farm farm, Farmer farmer) {
+    public void pilotRoutine(Farm farm, Farmer farmer) {
 
     }
 }

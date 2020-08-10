@@ -9,5 +9,5 @@ public interface WeekdayRoutine {
 
     void doRoutine(Farm farm, Farmer farmer);
     void farmerRoutine(Farm farm, Farmer farmer);
-    void PilotRoutine(Farm farm, Farmer farmer);
+    void pilotRoutine(Farm farm, Farmer farmer);
 }

@@ -28,6 +28,15 @@ public class Farmer extends Person implements Botanist, Rider {
 
     }
 
+    public void trade(Edible edible, Inventory inventory) {
+        if(edible instanceof Wheat) {
+            inventory.removeMultiple(edible, inventory.getCount(edible) / 2);
+            EarCorn earCorn = new EarCorn();
+            Wheat wheat = new Wheat();
+            inventory.addMultiple(earCorn, 2 * (inventory.getCount(edible) / 2));
+        }
+    }
+
     public boolean eatBreakfast(Inventory foodSource){
         // 1 Earcorn, 2 Tomato, 5 Egg
         boolean hasEaten = this.eat(new EarCorn(), foodSource);
