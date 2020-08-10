@@ -24,7 +24,8 @@ public class MondayRoutine implements WeekdayRoutine {
 
     }
 
-    public void PilotRoutine(Farm farm, Farmer farmer) {
+
+    public void pilotRoutine(Farm farm, Farmer farmer) {
         if(farmer.getName().equals("Froilanda")) {
             farm.getAircraft().fly();
             Field field = farm.getField();

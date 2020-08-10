@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Stable extends Shelter<Integer, Horse> {
     private int numInhabitants = 0;
 

@@ -30,6 +30,6 @@ class MondayRoutineTest {
 
     @Test
     void pilotRoutine() {
-        Weekdays.MONDAY.getRoutine().PilotRoutine(farm,farmer2);
+        Weekdays.MONDAY.getRoutine().pilotRoutine(farm,farmer2);
     }
 }
