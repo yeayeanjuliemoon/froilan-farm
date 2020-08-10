@@ -10,24 +10,25 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChickenCoopTest {
-    ChickenCoop chickenCoop;
-    List<Chicken> actualCoop;
+    private ChickenCoop chickenCoop;
 
     ChickenCoopTest(){
-        chickenCoop = new ChickenCoop();
+        this.chickenCoop = new ChickenCoop();
     }
 
     @Test
-    void getChickenCoopList() {
+    void testMakeChickens() {
+        Integer expected = 15;
+        this.chickenCoop.addChickens(expected);
 
-        actualCoop = chickenCoop.getChickenCoopList(Integer.valueOf(3));
-        Assert.assertNotNull(actualCoop);
-        Assert.assertTrue(actualCoop.size()==3);
+        Integer actual = this.chickenCoop.getInhabitants().size();
+
+        assertEquals(expected, actual);
     }
 
     @Test
     void instanceOf(){
 
-        Assert.assertTrue(chickenCoop instanceof Shelter);
+        Assert.assertTrue(chickenCoop != null);
     }
 }
