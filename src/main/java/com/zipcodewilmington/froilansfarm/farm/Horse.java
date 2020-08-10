@@ -19,7 +19,9 @@ public class Horse extends Animal implements Rideable {
     }
 
     public void ride() {
-        Boolean hasBeenRidden = true;
+        //Boolean hasBeenRidden = true;
+        System.out.println("horse riding completed!!!");
+        return;
     }
 
     public boolean feedHorse(Inventory foodSource){

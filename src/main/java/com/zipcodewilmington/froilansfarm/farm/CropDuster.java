@@ -13,7 +13,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
 
     public void ride() {
-
+        fly();
     }
 
     public void fertilize(CropRow row) {

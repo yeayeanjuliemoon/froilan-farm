@@ -6,7 +6,7 @@ import java.util.List;
 public class CropRow <T extends Crop> {
 
     Boolean hasBeenFertilized = false;
-    List<Crop> cropList ;
+    List<Crop> cropList;
 
     CropRow(){
        cropList = new ArrayList<Crop>();
