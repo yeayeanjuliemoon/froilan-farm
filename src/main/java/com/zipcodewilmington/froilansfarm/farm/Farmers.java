@@ -9,7 +9,7 @@ public class Farmers {
     private List<Farmer> farmerList;
 
     private Farmers(){
-        this.farmerList = new ArrayList<Farmer>();
+        this.farmerList = new ArrayList<>();
         this.farmerList.add(new Farmer("Froilan", 1));
         this.farmerList.add(new Pilot("Froilanda", 2));
     }

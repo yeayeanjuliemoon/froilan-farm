@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.farm;
 public class TomatoPlant extends Crop {
     Edible tomato;
 
-    TomatoPlant(){
+    public TomatoPlant(){
 
     }
 

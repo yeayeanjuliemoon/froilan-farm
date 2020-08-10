@@ -9,17 +9,15 @@ public class Chicken extends Animal implements Produce {
     Integer id;
     String type;
 
-    Chicken(Integer id, String name){
+    public Chicken(Integer id, String name){
         super(id,name);
     }
-
 
     public String makeNoise() {
         return "ChickChick";
     }
 
     public Edible yield() {
-
         if(hasBeenFertilized==false){
             return egg;
         }
@@ -27,6 +25,9 @@ public class Chicken extends Animal implements Produce {
         return null;
     }
 
+    public void setHasBeenFertilized(boolean hasBeenFertilized) {
+        this.hasBeenFertilized = hasBeenFertilized;
+    }
 
 
     @Override
