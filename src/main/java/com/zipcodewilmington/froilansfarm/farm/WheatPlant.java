@@ -1,17 +1,17 @@
 package com.zipcodewilmington.froilansfarm.farm;
 
-public class CornStalk extends Crop {
+public class WheatPlant extends Crop {
 
-    Edible earCorn;
+    Edible wheat;
 
-    public CornStalk(){
+    public WheatPlant() {
 
     }
 
     @Override
     public Edible yield() {
-        earCorn = new EarCorn();
-        return earCorn;
+        wheat = new Wheat();
+        return wheat;
     }
 
     Boolean fertilize(){

@@ -30,7 +30,6 @@ public class MondayRoutine implements WeekdayRoutine {
             Field field = farm.getField();
             CropRow cropRows = field.getCropRow();
             List<Crop> cropList = cropRows.getCropList();
-
             for (Crop crop : cropList) {
                 field.fertilizeField();
             }
