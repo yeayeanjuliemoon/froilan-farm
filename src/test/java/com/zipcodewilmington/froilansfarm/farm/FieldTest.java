@@ -24,7 +24,7 @@ class FieldTest {
     }
 
     @Test
-    void setFieldTest() throws InstantiationException, IllegalAccessException {
+    void setFieldTest(){
         Integer expected = 1;
         this.field.setField(this.stalk);
 
@@ -34,7 +34,7 @@ class FieldTest {
     }
 
     @Test
-    void setFieldTestType() throws InstantiationException, IllegalAccessException {
+    void setFieldTestType() {
         this.field.setField(this.stalk);
 
         Crop result = this.field.getField().get(0).getCropList().get(0);
@@ -44,24 +44,9 @@ class FieldTest {
 
     @Test
     void getFieldTest(){
-        field.setField(crop1);
+        field.setField(this.stalk);
         List<CropRow> fieldlist = field.getField();
         Assert.assertTrue(fieldlist.size()>0);
-    }
-
-    @Test
-    void setCropRowTest(){
-        List<CropRow> cropRowList = new ArrayList<>();
-        CropRow cropRow = new CropRow();
-        CropRow cropRow1 = new CropRow();
-        cropRow.addCropRow(new TomatoPlant());
-        cropRow1.addCropRow(new CornStalk());
-        cropRowList.add(cropRow);
-        cropRowList.add(cropRow1);
-        field.setCropRowList(cropRowList);
-        Assert.assertEquals(cropRowList.size(), field.getField().size());
-        Assert.assertNotNull(field.getCropRow(1));
-
     }
 
     @Test
