@@ -5,41 +5,19 @@ import com.zipcodewilmington.froilansfarm.farm.*;
 import java.util.List;
 
 public class TuesdayRoutine implements WeekdayRoutine {
-    Tractor tractor ;
-    Inventory inv = new Inventory();
-
-    TuesdayRoutine(){
-        tractor = new Tractor();
-    }
 
     public void doRoutine(Farm farm, Farmer farmer) {
-
-        List<Stable> stables = farm.getStables();
-        for(Stable s : stables){
-            for(Horse horse : s.getHorses()){
-                horse.ride();
-                inv.addMultiple(new EarCorn(), 3);
-                horse.feedHorse(this.inv);
-            }
-        }
-
-        farmer.eatBreakfast(inv);
-
-    }
-
-    public void farmerRoutine(Farm farm, Farmer farmer) {
-        if(farmer.getName().equals("Froilan")) {
+        if (farmer.getName().equals("Froilan")) {
+            Tractor tractor = (Tractor) farm.getFarmVehicles().get(0);
             Field field = farm.getField();
-            CropRow cropRows = field.getCropRow();
-            List<Crop> cropList = cropRows.getCropList();
-
-            for (Crop crop : cropList) {
-                tractor.harvest(crop);
+            List<CropRow> cropRows = field.getField();
+            for (CropRow row : cropRows) {
+                List<Crop> crops = row.getCropList();
+                for (Crop crop : crops) {
+                    farm.getEdibleInventory().addToContainer(tractor.harvest(crop));
+                }
             }
         }
     }
 
-    public void pilotRoutine(Farm farm, Farmer farmer) {
-
-    }
 }

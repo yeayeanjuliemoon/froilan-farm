@@ -27,11 +27,6 @@ class FieldTest {
         Assert.assertNotNull(field.getField());
     }
 
-    @Test
-    void fertilizeFieldTest() {
-        field.fertilizeField();
-        Assert.assertTrue(field.hasBeenFertilized==true);
-    }
 
     @Test
     void resetFertilizerTest(){

@@ -115,4 +115,29 @@ public class Farm {
     public Inventory getEdibleInventory() {
         return edibleInventory;
     }
+
+    public void dailyActivities(){
+        // Everyone eats breakfast, ride and feed horses, do daily routine
+        rideHorses();
+        for(Person p : this.farmHouse.getInhabitants()){
+            if(p instanceof Farmer){
+                ((Farmer) p).eatBreakfast(this.edibleInventory);
+                this.currentDay.getRoutine().doRoutine(this, (Farmer) p);
+            }
+        }
+    }
+
+    public void rideHorses() {
+        for (Stable s : this.stables) {
+            for (Horse horse : s.getHorses()) {
+                horse.ride();
+                horse.feedHorse(this.edibleInventory);
+            }
+        }
+    }
+
+    protected void setUpFarmVehicles(){
+        this.farmVehicles.add(new Tractor());
+        this.farmVehicles.add(new Tractor());
+    }
 }

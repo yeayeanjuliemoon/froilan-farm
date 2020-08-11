@@ -8,32 +8,25 @@ public class Field {
     List<CropRow> cropRowList;
     boolean hasBeenFertilized = false;
 
-    CropRow cropRow;
 
     Field(){
         cropRowList = new ArrayList<CropRow>();
-        cropRow = new CropRow();
     }
 
     public void setField(Crop cropType){
-        cropRow.addCropRow(cropType);
-        cropRowList.addAll(cropRow.getCropList());
+        cropRowList.add(new CropRow());
     }
 
     public List<CropRow> getField() {
         return cropRowList;
     }
 
-    public CropRow getCropRow() {
-        return cropRow;
+    public CropRow getCropRow(Integer index) {
+        return cropRowList.get(index);
     }
 
     public void setCropRowList(List<CropRow> cropRowList) {
         this.cropRowList = cropRowList;
-    }
-
-    public void fertilizeField(){
-        hasBeenFertilized = true;
     }
 
     public void resetFertilizer(){

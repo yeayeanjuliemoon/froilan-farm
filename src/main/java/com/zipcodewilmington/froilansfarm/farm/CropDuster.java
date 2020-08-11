@@ -4,8 +4,15 @@ import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
 
-    public void operate(Farm farm) {
+    @Override
+    public void fly(Farm farm){
+        this.operate(farm);
+    }
 
+    public void operate(Farm farm) {
+        for(CropRow row : farm.getField().getField()){
+            fertilize(row);
+        }
     }
 
     public String makeNoise() {
@@ -13,7 +20,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
 
     public void ride() {
-        fly();
+
     }
 
     public void fertilize(CropRow row) {
