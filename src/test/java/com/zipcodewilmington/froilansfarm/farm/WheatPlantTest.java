@@ -17,6 +17,7 @@ public class WheatPlantTest {
     @Test
     void yieldTest(){
         wheatPlant = new WheatPlant();
+        wheatPlant.fertilize();
         wheat = wheatPlant.yield();
         Assert.assertTrue(wheat instanceof Wheat);
     }

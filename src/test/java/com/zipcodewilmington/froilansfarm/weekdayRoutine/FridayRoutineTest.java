@@ -13,10 +13,9 @@ public class FridayRoutineTest {
         Farmer farmer = new Farmer("Froilan", 1);
         Farm farm = new Farm();
 
-        farm.getEdibleInventory().addMultiple(new Wheat(), 10);
         fridayRoutine.doRoutine(farm, farmer);
 
-        Integer expected = 10;
+        Integer expected = 120;
         Integer actual = farm.getEdibleInventory().getCount(new EarCorn());
 
         Assert.assertEquals(expected, actual);

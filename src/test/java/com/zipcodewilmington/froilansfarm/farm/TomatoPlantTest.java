@@ -13,6 +13,7 @@ class TomatoPlantTest {
     @BeforeEach
      void setUp(){
         tomatoPlant = new TomatoPlant();
+        tomatoPlant.fertilize();
     }
 
     @Test

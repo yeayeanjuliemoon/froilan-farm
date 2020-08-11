@@ -15,10 +15,10 @@ public class ThursdayRoutineTest {
 
         thursdayRoutine.doRoutine(farm, farmer);
 
-        Integer expected = 20;
+        Integer expected = 21;
         Integer actual = farm.getCompleteField()
                 .getField()
-                .get(5)
+                .get(4)
                 .getCropList()
                 .size();
 

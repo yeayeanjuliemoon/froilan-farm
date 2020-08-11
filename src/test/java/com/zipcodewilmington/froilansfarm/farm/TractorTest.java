@@ -31,6 +31,7 @@ public class TractorTest {
     public void testHarvestTomatoPlant() {
         Tractor tractor = new Tractor();
         TomatoPlant tomatoPlant = new TomatoPlant();
+        tomatoPlant.fertilize();
         Edible expected = new Tomato();
 
         Edible actual = tractor.harvest(tomatoPlant);

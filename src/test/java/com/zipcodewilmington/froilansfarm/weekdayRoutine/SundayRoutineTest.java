@@ -16,7 +16,7 @@ public class SundayRoutineTest {
 
         sundayRoutine.doRoutine(farm, farmer);
 
-        Integer expectedCornStalk = 100;
+        Integer expectedCornStalk = 101;
         Integer actualCornStalk = farm.getCompleteField()
                 .getField()
                 .get(0)
@@ -25,7 +25,7 @@ public class SundayRoutineTest {
 
         Assert.assertEquals(expectedCornStalk, actualCornStalk);
 
-        Integer expectedTomatoPlant = 20;
+        Integer expectedTomatoPlant = 21;
         Integer actualTomatoPlant = farm.getCompleteField()
                 .getField()
                 .get(1)
@@ -34,7 +34,7 @@ public class SundayRoutineTest {
 
         Assert.assertEquals(expectedTomatoPlant, actualTomatoPlant);
 
-        Integer expectedWheatPlant = 40;
+        Integer expectedWheatPlant = 41;
         Integer actualWheatPlant = farm.getCompleteField()
                 .getField()
                 .get(2)
