@@ -7,15 +7,13 @@ import java.util.List;
 
 public class ThursdayRoutine implements WeekdayRoutine {
 
-    private Farm farm;
-    private Farmers farmers = Farmers.getInstance();
-    private Object EarCorn;
-
     public void doRoutine(Farm farm, Farmer farmer) {
         if(farmer.getName().equals("Froilan")){
             for(int i = 4; i < 6; i++) {
                 List<CropRow> cropRows = farm.getCompleteField().getField();
-                farmer.plant(new CornStalk(), cropRows.get(i));
+                for(int j = 0; j < 20; j++) {
+                    farmer.plant(new CornStalk(), cropRows.get(i));
+                }
             }
         }
     }
