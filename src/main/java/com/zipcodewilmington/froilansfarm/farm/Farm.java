@@ -26,6 +26,7 @@ public class Farm {
         // Default to sunday
         this.currentDay = Weekdays.SUNDAY;
         this.edibleInventory = new Inventory();
+        setUpFarm();
     }
 
     private void setUpFarm(){
@@ -37,7 +38,11 @@ public class Farm {
         2 FarmVehicle
         1 Aircraft
          */
-
+        setUpFarmVehicles();
+        setUpFarmHouse();
+        setUpCoops(15);
+        setUpStables(10);
+        createField();
     }
 
     protected void setUpFarmHouse(){
