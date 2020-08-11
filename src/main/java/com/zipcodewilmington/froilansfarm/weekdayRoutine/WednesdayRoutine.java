@@ -8,25 +8,12 @@ public class WednesdayRoutine implements WeekdayRoutine{
     Inventory inv = new Inventory();
 
     public void doRoutine(Farm farm, Farmer farmer) {
-        List<Stable> stables = farm.getStables();
-        for(Stable s : stables){
-            for(Horse horse : s.getHorses()){
-                horse.ride();
-                inv.addMultiple(new EarCorn(), 3);
-                horse.feedHorse(this.inv);
+        if(farmer.getName().equals("Froilan")){
+            for(ChickenCoop coop : farm.getCoops()){
+                for(Chicken c : coop.getInhabitants()){
+                    farm.getEdibleInventory().addToContainer(c.yield());
+                }
             }
         }
-
-        boolean hasEaten = farmer.eatBreakfast(inv);
-    }
-
-
-
-    public void farmerRoutine(Farm farm, Farmer farmer) {
-
-    }
-
-    public void pilotRoutine(Farm farm, Farmer farmer) {
-
     }
 }
