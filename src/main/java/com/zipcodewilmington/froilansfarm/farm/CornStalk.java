@@ -15,7 +15,8 @@ public class CornStalk extends Crop {
     }
 
     Boolean fertilize(){
-        return hasBeenFertilized = true;
+        hasBeenFertilized = true;
+        return hasBeenFertilized;
 
     }
 }

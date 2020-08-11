@@ -23,13 +23,10 @@ class MondayRoutineTest {
        farmer2 = new Farmer("Froilanda",2);
     }
 
-    @Test
-    void doRoutine() {
-        Weekdays.MONDAY.getRoutine().doRoutine(farm,farmer1);
-    }
 
     @Test
-    void pilotRoutine() {
-        Weekdays.MONDAY.getRoutine().pilotRoutine(farm,farmer2);
+    void pilotRoutine()
+    {
+        Weekdays.MONDAY.getRoutine().doRoutine(farm,farmer2);
     }
 }

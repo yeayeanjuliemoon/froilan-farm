@@ -19,8 +19,11 @@ class TomatoPlantTest {
     void yield(){
         tomato = tomatoPlant.yield();
         Assert.assertTrue(tomato instanceof Tomato);
-
     }
 
+    @Test
+    void fertilizeTest(){
+      Assert.assertTrue(tomatoPlant.fertilize());
+    }
 
 }

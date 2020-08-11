@@ -25,11 +25,7 @@ class TuesdayRoutineTest {
     @Test
     void doRoutine() {
         tuesRoutine.doRoutine(farm,farmer1);
-        tuesRoutine.doRoutine(farm,farmer2);
+
     }
 
-    @Test
-    void farmerRoutine() {
-        tuesRoutine.farmerRoutine(farm,farmer1);
-    }
 }
