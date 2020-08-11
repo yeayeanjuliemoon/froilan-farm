@@ -19,6 +19,7 @@ public class TractorTest {
     public void testHarvestCornStalk() {
         Tractor tractor = new Tractor();
         CornStalk cornStalk = new CornStalk();
+        cornStalk.fertilize();
         Edible expected = new EarCorn();
 
         Edible actual = tractor.harvest(cornStalk);

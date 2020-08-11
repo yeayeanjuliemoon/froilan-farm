@@ -13,8 +13,10 @@ public class Field {
         cropRowList = new ArrayList<CropRow>();
     }
 
-    public void setField(Crop cropType){
-        cropRowList.add(new CropRow());
+    public void setField(Crop cropType) {
+        CropRow row = new CropRow();
+        row.addCropRow(cropType);
+        cropRowList.add(row);
     }
 
     public List<CropRow> getField() {
@@ -25,11 +27,12 @@ public class Field {
         return cropRowList.get(index);
     }
 
-    public void setCropRowList(List<CropRow> cropRowList) {
-        this.cropRowList = cropRowList;
-    }
-
     public void resetFertilizer(){
-        hasBeenFertilized = false;
+        this.hasBeenFertilized = false;
+        for(CropRow row : this.cropRowList){
+            for(Crop c : row.getCropList()){
+                c.resetFertilizer();
+            }
+        }
     }
 }

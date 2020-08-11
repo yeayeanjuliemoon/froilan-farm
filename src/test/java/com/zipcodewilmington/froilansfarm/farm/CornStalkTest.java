@@ -21,6 +21,7 @@ class CornStalkTest {
     @Test
     void yieldTest(){
         cornStalk = new CornStalk();
+        cornStalk.fertilize();
         earCorn = cornStalk.yield();
         Assert.assertTrue(earCorn instanceof EarCorn);
     }

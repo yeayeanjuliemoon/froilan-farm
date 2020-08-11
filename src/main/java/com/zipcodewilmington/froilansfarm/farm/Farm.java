@@ -29,7 +29,7 @@ public class Farm {
         setUpFarm();
     }
 
-    private void setUpFarm(){
+    private void setUpFarm() {
         /* A farm has:
         2 people (Froilan and Froilanda)
         1 Field with 5 Crop Row
@@ -101,12 +101,12 @@ public class Farm {
         return this.field;
     }
 
-    public void createField(){
-        field.setField(new CornStalk());
-        field.setField(new TomatoPlant());
-        field.setField(new CornStalk());
-        field.setField(new CornStalk());
-        field.setField(new TomatoPlant());
+    public void createField() {
+        this.field.setField(new CornStalk());
+        this.field.setField(new TomatoPlant());
+        this.field.setField(new WheatPlant());
+        this.field.setField(new CornStalk());
+        this.field.setField(new CornStalk());
     }
 
     public List<FarmVehicle> getFarmVehicles() {
