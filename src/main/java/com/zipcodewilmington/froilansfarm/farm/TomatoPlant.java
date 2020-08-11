@@ -15,7 +15,6 @@ public class TomatoPlant extends Crop {
 
     Boolean fertilize(){
         return hasBeenFertilized = true;
-
     }
 
 }

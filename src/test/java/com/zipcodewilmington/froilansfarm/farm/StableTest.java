@@ -5,6 +5,7 @@ import org.junit.Before;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,6 +32,14 @@ class StableTest {
     void instanceOf(){
 
         Assert.assertTrue(stable != null);
+    }
+
+    @Test
+    void getHorsesTest(){
+        List<Horse> expected = new ArrayList<>();
+        stable.addHorses(4);
+        expected = stable.getHorses();
+        Assert.assertTrue(expected.size()>0);
     }
 
 }

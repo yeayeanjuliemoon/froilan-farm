@@ -2,6 +2,8 @@ package com.zipcodewilmington.froilansfarm.weekdayRoutine;
 
 import com.zipcodewilmington.froilansfarm.farm.Farm;
 import com.zipcodewilmington.froilansfarm.farm.Farmer;
+import com.zipcodewilmington.froilansfarm.farm.Field;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +15,7 @@ class TuesdayRoutineTest {
     Farm farm;
     Farmer farmer1;
     Farmer farmer2;
+
     TuesdayRoutine tuesRoutine = new TuesdayRoutine();
 
     @BeforeEach
@@ -25,11 +28,8 @@ class TuesdayRoutineTest {
     @Test
     void doRoutine() {
         tuesRoutine.doRoutine(farm,farmer1);
-        tuesRoutine.doRoutine(farm,farmer2);
+        Field completeField = farm.getCompleteField();
+        Assert.assertEquals(5, completeField.getField().size());
     }
 
-    @Test
-    void farmerRoutine() {
-        tuesRoutine.farmerRoutine(farm,farmer1);
-    }
 }
