@@ -9,7 +9,7 @@ public class TuesdayRoutine implements WeekdayRoutine {
     public void doRoutine(Farm farm, Farmer farmer) {
         if (farmer.getName().equals("Froilan")) {
             Tractor tractor = (Tractor) farm.getFarmVehicles().get(0);
-            Field field = farm.getField();
+            Field field = farm.getCompleteField();
             List<CropRow> cropRows = field.getField();
             for (CropRow row : cropRows) {
                 List<Crop> crops = row.getCropList();

@@ -16,20 +16,16 @@ class TuesdayRoutineTest {
     TuesdayRoutine tuesRoutine = new TuesdayRoutine();
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         farm = new Farm();
         farmer1 = new Farmer("Froilan", 1);
-        farmer2 = new Farmer("Froilanda",2);
+        farmer2 = new Farmer("Froilanda", 2);
     }
 
     @Test
     void doRoutine() {
-        tuesRoutine.doRoutine(farm,farmer1);
-        tuesRoutine.doRoutine(farm,farmer2);
+        tuesRoutine.doRoutine(farm, farmer1);
+        tuesRoutine.doRoutine(farm, farmer2);
     }
 
-    @Test
-    void farmerRoutine() {
-        tuesRoutine.farmerRoutine(farm,farmer1);
-    }
 }

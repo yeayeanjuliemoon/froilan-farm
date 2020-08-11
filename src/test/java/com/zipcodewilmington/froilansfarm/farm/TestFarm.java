@@ -16,7 +16,6 @@ public class TestFarm {
 
     @Test
     public void testFarmHouseSetupCount(){
-        this.farm.setUpFarmHouse();
         Integer expected = 2;
 
         Integer actual = this.farm.getFarmHouse().getInhabitants().size();
@@ -26,7 +25,6 @@ public class TestFarm {
 
     @Test
     public void testFarmHouseSetupPeople(){
-        this.farm.setUpFarmHouse();
         List<Farmer> expected = Farmers.getInstance().getFarmerList();
 
         List<Person> actual = this.farm.getFarmHouse().getInhabitants();
@@ -36,7 +34,6 @@ public class TestFarm {
 
     @Test
     public void testCoopSetup(){
-        this.farm.setUpCoops(15);
         Integer expected = 4;
 
         Integer actual = this.farm.getCoops().size();
@@ -46,11 +43,12 @@ public class TestFarm {
 
     @Test
     public void testStableSetup(){
-        this.farm.setUpStables(10);
         Integer expected = 3;
 
         Integer actual = this.farm.getStables().size();
 
         assertEquals(expected, actual);
     }
+
+    
 }
