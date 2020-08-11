@@ -12,4 +12,8 @@ public abstract class Crop implements Produce {
 
     }
 
+    void resetFertilizer(){
+        this.hasBeenFertilized = false;
+    }
+
 }

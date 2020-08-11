@@ -14,7 +14,10 @@ public class TuesdayRoutine implements WeekdayRoutine {
             for (CropRow row : cropRows) {
                 List<Crop> crops = row.getCropList();
                 for (Crop crop : crops) {
-                    farm.getEdibleInventory().addToContainer(tractor.harvest(crop));
+                    Edible cropResult = tractor.harvest(crop);
+                    if (cropResult != null) {
+                        farm.getEdibleInventory().addToContainer(tractor.harvest(crop));
+                    }
                 }
             }
         }

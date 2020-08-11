@@ -10,8 +10,12 @@ public class CornStalk extends Crop {
 
     @Override
     public Edible yield() {
-        earCorn = new EarCorn();
-        return earCorn;
+        if(hasBeenFertilized) {
+            earCorn = new EarCorn();
+            return earCorn;
+        } else{
+            return null;
+        }
     }
 
     Boolean fertilize(){

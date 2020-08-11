@@ -13,7 +13,7 @@ public class Farm {
     private final Field field;
     private final List<FarmVehicle> farmVehicles;
     private final Aircraft aircraft;
-    private final Weekdays currentDay;
+    private Weekdays currentDay;
     private final Inventory edibleInventory;
 
     public Farm(){
@@ -29,7 +29,7 @@ public class Farm {
         setUpFarm();
     }
 
-    private void setUpFarm(){
+    private void setUpFarm() {
         /* A farm has:
         2 people (Froilan and Froilanda)
         1 Field with 5 Crop Row
@@ -43,6 +43,7 @@ public class Farm {
         setUpCoops(15);
         setUpStables(10);
         createField();
+        initializeInventory();
     }
 
     protected void setUpFarmHouse(){
@@ -78,7 +79,7 @@ public class Farm {
                 numHorse = 0;
             }
             else{
-                s.addHorses(numHorse);
+                s.addHorses(4);
                 numHorse -= 4;
             }
         }
@@ -100,13 +101,12 @@ public class Farm {
         return this.field;
     }
 
-    public void createField(){
-        field.setField(new CornStalk());
-        field.setField(new TomatoPlant());
-        field.setField(new CornStalk());
-        field.setField(new CornStalk());
-        field.setField(new TomatoPlant());
-        field.setField(new CornStalk());
+    public void createField() {
+        this.field.setField(new CornStalk());
+        this.field.setField(new TomatoPlant());
+        this.field.setField(new WheatPlant());
+        this.field.setField(new CornStalk());
+        this.field.setField(new CornStalk());
     }
 
     public List<FarmVehicle> getFarmVehicles() {
@@ -121,13 +121,17 @@ public class Farm {
         return currentDay;
     }
 
+    public void setCurrentDay(Weekdays day){
+        this.currentDay = day;
+    }
+
     public Inventory getEdibleInventory() {
         return edibleInventory;
     }
 
     public void dailyActivities(){
         // Everyone eats breakfast, ride and feed horses, do daily routine
-        rideHorses();
+        tendHorses();
         for(Person p : this.farmHouse.getInhabitants()){
             if(p instanceof Farmer){
                 ((Farmer) p).eatBreakfast(this.edibleInventory);
@@ -136,7 +140,7 @@ public class Farm {
         }
     }
 
-    public void rideHorses() {
+    public void tendHorses() {
         for (Stable s : this.stables) {
             for (Horse horse : s.getHorses()) {
                 horse.ride();
@@ -148,5 +152,12 @@ public class Farm {
     protected void setUpFarmVehicles(){
         this.farmVehicles.add(new Tractor());
         this.farmVehicles.add(new Tractor());
+    }
+
+    private void initializeInventory(){
+        this.edibleInventory.addMultiple(new EarCorn(), 100);
+        this.edibleInventory.addMultiple(new Tomato(), 50);
+        this.edibleInventory.addMultiple(new Egg(), 50);
+        this.edibleInventory.addMultiple(new Wheat(), 20);
     }
 }

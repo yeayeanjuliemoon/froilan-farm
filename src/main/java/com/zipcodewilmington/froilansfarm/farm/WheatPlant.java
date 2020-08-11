@@ -10,8 +10,12 @@ public class WheatPlant extends Crop {
 
     @Override
     public Edible yield() {
-        wheat = new Wheat();
-        return wheat;
+        if(hasBeenFertilized) {
+            wheat = new Wheat();
+            return wheat;
+        } else{
+            return null;
+        }
     }
 
     Boolean fertilize(){
