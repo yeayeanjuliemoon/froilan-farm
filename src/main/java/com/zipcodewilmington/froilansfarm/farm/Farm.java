@@ -91,13 +91,16 @@ public class Farm {
         return coops;
     }
 
-    public Field getField() {
+    public Field getCompleteField() {
+        return this.field;
+    }
+
+    public void createField(){
         field.setField(new CornStalk());
         field.setField(new TomatoPlant());
         field.setField(new CornStalk());
         field.setField(new CornStalk());
         field.setField(new TomatoPlant());
-        return field;
     }
 
     public List<FarmVehicle> getFarmVehicles() {

@@ -12,34 +12,11 @@ public class ThursdayRoutine implements WeekdayRoutine {
     private Object EarCorn;
 
     public void doRoutine(Farm farm, Farmer farmer) {
-        farmerRoutine(farm, farmers.getFarmerList().get(0));
-        pilotRoutine(farm, farmers.getFarmerList().get(1));
-    }
-
-    public void farmerRoutine(Farm farm, Farmer farmer) {
-        farmer.eatBreakfast(farm.getEdibleInventory());
-        for(Stable stable : farm.getStables()) {
-            for(Horse horse : stable.getInhabitants()) {
-                horse.ride();
-                horse.feedHorse((Inventory) EarCorn);
+        if(farmer.getName().equals("Froilan")){
+            for(int i = 4; i < 6; i++) {
+                List<CropRow> cropRows = farm.getCompleteField().getField();
+                farmer.plant(new CornStalk(), cropRows.get(i));
             }
         }
-
-        List<CropRow> cropRows = farm.getField().getField();
-
-        for(int i = 4; i < 6; i++) {
-            farmer.plant(new CornStalk(), cropRows.get(i));
-        }
-    }
-
-    public void pilotRoutine(Farm farm, Farmer farmer) {
-        farmer.eatBreakfast(farm.getEdibleInventory());
-        for(Stable stable : farm.getStables()) {
-            for(Horse horse : stable.getInhabitants()) {
-                horse.ride();
-                horse.feedHorse((Inventory) EarCorn);
-            }
-        }
-
     }
 }

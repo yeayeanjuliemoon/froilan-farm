@@ -10,8 +10,8 @@ public class Farmer extends Person implements Botanist, Rider {
         super(name, id);
     }
 
-    public Crop plant(Crop c, CropRow row) {
-        return null;
+    public void plant(Crop c, CropRow row) {
+        row.addCropRow(c);
     }
 
 

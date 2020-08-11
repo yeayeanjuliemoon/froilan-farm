@@ -5,5 +5,5 @@ import com.zipcodewilmington.froilansfarm.farm.CropRow;
 
 public interface Botanist {
 
-    Crop plant(Crop c, CropRow row);
+    void plant(Crop c, CropRow row);
 }
