@@ -14,8 +14,6 @@ public class Farmer extends Person implements Botanist, Rider {
         row.addCropRow(c);
     }
 
-
-
     public String makeNoise() {
         return null;
     }
@@ -31,9 +29,7 @@ public class Farmer extends Person implements Botanist, Rider {
     public void trade(Edible edible, Inventory inventory) {
         if(edible instanceof Wheat) {
             inventory.removeMultiple(edible, inventory.getCount(edible) / 2);
-            EarCorn earCorn = new EarCorn();
-            Wheat wheat = new Wheat();
-            inventory.addMultiple(earCorn, 2 * (inventory.getCount(edible) / 2));
+            inventory.addMultiple(new EarCorn(), inventory.getCount(edible) * 2);
         }
     }
 

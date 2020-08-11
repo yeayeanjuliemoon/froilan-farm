@@ -25,7 +25,6 @@ class MondayRoutineTest {
        farmer2 = new Farmer("Froilanda",2);
     }
 
-
     @Test
     void pilotRoutine()
     {

@@ -14,6 +14,28 @@ public class TractorTest {
 
         Assert.assertEquals(expected, actual);
     }
+  
+    @Test
+    public void testHarvestCornStalk() {
+        Tractor tractor = new Tractor();
+        CornStalk cornStalk = new CornStalk();
+        EarCorn earCorn = new EarCorn();
 
+        Edible expected = earCorn;
+        Edible actual = tractor.harvest(cornStalk);
 
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHarvestTomatoPlant() {
+        Tractor tractor = new Tractor();
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        Tomato tomato = new Tomato();
+
+        Edible expected = tomato;
+        Edible actual = tractor.harvest(tomatoPlant);
+
+        Assert.assertEquals(expected, actual);
+    }
 }
