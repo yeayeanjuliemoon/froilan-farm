@@ -24,7 +24,8 @@ class MondayRoutineTest {
        farmer1 = new Farmer("Froilan", 1);
        farmer2 = new Farmer("Froilanda",2);
     }
-
+    
+    @Test
     void pilotRoutine()
     {
         Weekdays.MONDAY.getRoutine().doRoutine(farm,farmer2);
