@@ -14,7 +14,7 @@ public class TractorTest {
 
         Assert.assertEquals(expected, actual);
     }
-
+  
     @Test
     public void testHarvestCornStalk() {
         Tractor tractor = new Tractor();

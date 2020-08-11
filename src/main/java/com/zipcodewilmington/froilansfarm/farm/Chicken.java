@@ -21,7 +21,6 @@ public class Chicken extends Animal implements Produce {
         if(hasBeenFertilized==false){
             return egg;
         }
-
         return null;
     }
 

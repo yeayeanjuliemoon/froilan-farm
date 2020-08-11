@@ -8,17 +8,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HorseTest {
     Horse horse;
+    Animal animal;
     private Inventory inv = new Inventory();
 
     @BeforeEach
     void setUp(){
         horse = new Horse(1,"Pony_1");
+        animal = new Horse(2,"Pony_2");
 
     }
 
     @Test
     void makeNoiseTest() {
       String actual = horse.makeNoise();
+
+        Assert.assertEquals("HaHaHa",actual);
+    }
+
+    @Test
+    void makeNoiseTest2() {
+        String actual = animal.makeNoise();
+
         Assert.assertEquals("HaHaHa",actual);
     }
 
