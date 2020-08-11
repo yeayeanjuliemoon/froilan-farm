@@ -21,12 +21,15 @@ public class Chicken extends Animal implements Produce {
         if(hasBeenFertilized==false){
             return egg;
         }
-
         return null;
     }
 
     public void setHasBeenFertilized(boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
+    }
+
+    public boolean getHasBeenFertilized() {
+        return this.hasBeenFertilized;
     }
 
 

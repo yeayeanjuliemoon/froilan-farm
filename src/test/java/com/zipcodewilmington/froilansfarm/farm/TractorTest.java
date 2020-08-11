@@ -14,7 +14,7 @@ public class TractorTest {
 
         Assert.assertEquals(expected, actual);
     }
-
+  
     @Test
     public void testHarvestCornStalk() {
         Tractor tractor = new Tractor();
@@ -23,7 +23,6 @@ public class TractorTest {
         Edible expected = new EarCorn();
 
         Edible actual = tractor.harvest(cornStalk);
-
 
         Assert.assertEquals(expected, actual);
     }
@@ -35,7 +34,6 @@ public class TractorTest {
         Edible expected = new Tomato();
 
         Edible actual = tractor.harvest(tomatoPlant);
-
 
         Assert.assertEquals(expected, actual);
     }
