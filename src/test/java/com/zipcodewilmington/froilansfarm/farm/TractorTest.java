@@ -19,11 +19,10 @@ public class TractorTest {
     public void testHarvestCornStalk() {
         Tractor tractor = new Tractor();
         CornStalk cornStalk = new CornStalk();
+        EarCorn earCorn = new EarCorn();
 
-        tractor.harvest(cornStalk);
-
-        Integer expected = 1;
-        Integer actual = tractor.getInventory().getContainer().get(cornStalk.yield());
+        Edible expected = earCorn;
+        Edible actual = tractor.harvest(cornStalk);
 
         Assert.assertEquals(expected, actual);
     }
@@ -32,11 +31,10 @@ public class TractorTest {
     public void testHarvestTomatoPlant() {
         Tractor tractor = new Tractor();
         TomatoPlant tomatoPlant = new TomatoPlant();
+        Tomato tomato = new Tomato();
 
-        tractor.harvest(tomatoPlant);
-
-        Integer expected = 1;
-        Integer actual = tractor.getInventory().getContainer().get(tomatoPlant.yield());
+        Edible expected = tomato;
+        Edible actual = tractor.harvest(tomatoPlant);
 
         Assert.assertEquals(expected, actual);
     }

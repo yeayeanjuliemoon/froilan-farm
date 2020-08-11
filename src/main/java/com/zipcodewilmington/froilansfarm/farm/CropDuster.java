@@ -10,7 +10,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
 
     public void operate(Farm farm) {
-        for(CropRow row : farm.getField().getField()){
+        for(CropRow row : farm.getCompleteField().getField()){
             fertilize(row);
         }
     }

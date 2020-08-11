@@ -29,6 +29,10 @@ public class Chicken extends Animal implements Produce {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
+    public boolean getHasBeenFertilized() {
+        return this.hasBeenFertilized;
+    }
+
 
     @Override
     public boolean eat(Edible toEat, Inventory foodSource) {

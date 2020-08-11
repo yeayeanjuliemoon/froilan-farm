@@ -28,8 +28,8 @@ class MondayRoutineTest {
         Weekdays.MONDAY.getRoutine().doRoutine(farm,farmer1);
     }
 
-    @Test
-    void pilotRoutine() {
-        Weekdays.MONDAY.getRoutine().pilotRoutine(farm,farmer2);
-    }
+//    @Test
+//    void pilotRoutine() {
+//        Weekdays.MONDAY.getRoutine().pilotRoutine(farm,farmer2);
+//    }
 }

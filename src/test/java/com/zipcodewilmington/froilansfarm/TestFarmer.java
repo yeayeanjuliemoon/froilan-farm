@@ -69,4 +69,16 @@ public class TestFarmer {
         assertEquals(expectedEgg, this.newInventory.getCount(new Egg()));
     }
 
+    @Test
+    public void testTrade() {
+        Integer expectedCorn = 10;
+
+        this.newInventory.addMultiple(new Wheat(), 10);
+
+        newFarmer.trade(new Wheat(), newInventory);
+
+        Integer actualCorn = this.newInventory.getCount(new EarCorn());
+
+        assertEquals(expectedCorn, actualCorn);
+    }
 }
