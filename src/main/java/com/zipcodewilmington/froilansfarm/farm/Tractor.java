@@ -5,15 +5,10 @@ import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 import java.util.HashMap;
 
 public class Tractor extends Vehicle implements FarmVehicle {
-    private Inventory inventory;
 
     public Tractor() {
-        this.inventory = new Inventory();
     }
 
-    public Inventory getInventory() {
-        return inventory;
-    }
 
     public void operate(Farm farm) {
     }
@@ -25,7 +20,7 @@ public class Tractor extends Vehicle implements FarmVehicle {
     public void ride() {
     }
 
-    public void harvest(Crop crop) {
-        this.inventory.addToContainer(crop.yield());
+    public Edible harvest(Crop crop) {
+        return crop.yield();
     }
 }

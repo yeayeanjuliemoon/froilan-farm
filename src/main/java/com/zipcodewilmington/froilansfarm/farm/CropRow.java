@@ -3,21 +3,17 @@ package com.zipcodewilmington.froilansfarm.farm;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CropRow <T extends Crop> {
+public class CropRow {
 
     Boolean hasBeenFertilized = false;
     List<Crop> cropList;
 
     CropRow(){
-       cropList = new ArrayList<Crop>();
+       cropList = new ArrayList<>();
     }
 
     public void addCropRow(Crop cropType){
-        if (cropType instanceof TomatoPlant) {
-            cropList.add(new TomatoPlant());
-        }else if(cropType instanceof CornStalk){
-            cropList.add(new CornStalk());
-        }
+        this.cropList.add(cropType);
     }
 
     public List<Crop> getCropList(){
